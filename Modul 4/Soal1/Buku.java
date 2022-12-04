@@ -1,19 +1,30 @@
-package Praktikum4.Soal1;
+package praktikum4.soal1;
 
-public class Buku {
-    private String judul, penulis;
-    private int tahun;
+import java.util.*;
 
-    public Buku(String j, String p, int t) {
-        this.judul = j;
-        this.penulis = p;
-        this.tahun = t;
-    }
-
-    public void display(){
-        System.out.println("Detail Buku :");
-        System.out.println("Judul adalah " + judul);
-        System.out.println("penulis adalah" + penulis);
-        System.out.println("Tahun Terbit adalah " + tahun);
+public class Main {
+    public static void main(String[] args) {
+        // Deklarasi variabel penampung sementara
+        String judul = "", penulis = "";
+        int tahun = 0;
+        
+        // Instansiasi Scanner dengan nama input
+        Scanner input = new Scanner(System.in);
+        
+        // User input
+        System.out.print("Judul: ");
+        judul = input.nextLine();
+        
+        System.out.print("Penulis: ");
+        penulis = input.nextLine();
+        
+        System.out.print("Tahun Terbit: ");
+        tahun = input.nextInt();
+        
+        // Instansiasi Object Buku dengan nama buku
+        Buku buku = new Buku(judul, penulis, tahun);
+        
+        buku.display();
+        
     }
 }
